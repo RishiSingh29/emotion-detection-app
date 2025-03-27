@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Detection</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { margin-top: 20px; }
+        textarea { width: 50%; height: 100px; }
+        button { padding: 10px 20px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; font-size: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detection</h1>
+    <form method="post">
+        <textarea name="text" placeholder="Enter your text here..."></textarea><br>
+        <button type="submit">Predict Emotion</button>
+    </form>
+    
+    {% if text %}
+        <div class="result">Emotion: <strong>{{ emotion }}</strong></div>
+    {% endif %}
+</body>
+</html>
